@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de entrenamientos</title>
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/general2.css">
+</head>
+<body>
+    <section class="main">
+        <h1 class="titulo-pagina">Registrar entrenamientos</h1>
+
+        <form class="formulario" id="formulario-reg-entrenos">
+            <div class="seccion-form">
+                <label for="tipo">Tipo de entrenamiento</label>
+                <select name="tipo" id="tipo">
+                    <option selected disabled value="">Elige un tipo</option>
+                    <option value="Cardiovascular">Cardiovascular</option>
+                    <option value="Pesas">Pesas</option>
+                    <option value="Deportes">Deportes</option>
+                    <option value="Running">Running</option>
+                    <option value="Calistenia">Calistenia</option>
+                </select>
+            </div>
+
+            <div class="seccion-form">
+                <label for="grupoM">Grupo muscular</label>
+                <select name="grupoM" id="grupoM">
+                    <option selected disabled value="grupo">Elige un grupo</option>
+                    <option value="general">general</option>
+                    <option value="Hombros y espalda">Hombros y espalda</option>
+                    <option value="Pecho">Pecho</option>
+                    <option value="Abdomen">Abdomen</option>
+                    <option value="Piernas">Piernas</option>
+                </select>
+            </div>
+
+            <div class="seccion-form">
+                <label for="Intensidad">Intensidad</label>
+                <select name="Intensidad" id="Intensidad">
+                    <option selected disabled value="">Que tan intenso fue del 1-5?</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="seccion-form">
+                <label for="tiempo">Tiempo del entrenamiento</label>
+                <input name="tiempo" id="tiempo" class="campo-form gray-text" type="number" placeholder="-- mins">
+            </div>
+
+            <input class="boton" type="submit" value="Registrar">
+        </form>
+    </section>
+
+    <script src=""></script>
+</body>
+</html>
