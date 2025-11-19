@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio físico</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/cambioFisico.css">
+</head>
+<body>
+    <section class="main">
+        <h1 class="titulo-pagina">Cambio Fisico</h1>
+
+        <form class="formulario" id="formulario-cambio-fisico">
+            <div class="seccion-form-flex">
+                <input class="campo-form campo-peque" type="number" name="peso" placeholder="Peso actual">
+                <input class="campo-form campo-peque" type="number" name="pesoObj" placeholder="Peso Objetivo">
+            </div>
+            <div class="campo-form centrado">
+                <label for="tiempo">Tiempo para el cambio</label>
+                <input name="tiempo" id="tiempo" class="campo-form gray-text" type="number" placeholder="-- meses">
+            </div>
+
+            <input type="submit" class="boton" value="Calcular">
+        </form>
+
+        <div class="respuestas">
+            <div class="seccion-respuestas">
+                <h4 class="subtitulo gray-text">Necesidades alimentarias</h4>
+
+                <p class="field" id="carbos">Carbohidratos: </p>
+                <p class="field" id="proteina">Proteinas</p>
+                <p class="field" id="calorias">Calorias</p>
+                <p class="field" id="grasas">Grasas</p>
+            </div>
+            <div class="seccion-respuestas">
+                <h4 class="subtitulo gray-text">Ejercicio</h4>
+                <p class="field" id="ejercicio">Tu tipo de ejercicio adecuado</p>
+            </div>
+        </div>
+    </section>
+
+    <script src=""></script>
+</body>
+</html>
