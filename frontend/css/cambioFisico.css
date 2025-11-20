@@ -15,3 +15,9 @@
     margin: 0 auto;
     width: 20%;
 }
+
+@media (max-width: 480px) {
+    .seccion-form {
+        margin: 5% 0;
+    }
+}
