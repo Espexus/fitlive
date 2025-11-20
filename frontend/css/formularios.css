@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+}
+
+/* estilos de la caja en general  */
+.caja-formulario {
+    min-height: 80vh;
+    width: 40vw;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 10vh;
+    background-color: rgb(214, 86, 253);
+    color: white;
+    padding: 2% 4%;
+    border-radius: 30px;
+}
+.titulo-principal {
+    font-size: 4em;
+}
+.titulo-form {
+    font-size: 2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.titulo-principal, .titulo-form {
+    text-align: center;
+    color: rgb(7, 0, 104);
+}
+
+/* espaciados */
+.seccion-form {
+    margin: 8% 0;
+}
+
+/* label e inputs */
+label, .campo-form, .enlace-form {
+    display: block;
+}
+label {
+    font-size: 1.4em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 1%;
+}
+.campo-form {
+    height: 30px;
+    width: 70%;
+    padding: 0 2%;
+}
+
+/* enlace y boton */
+.enlace-form {
+    font-size: 1em;
+    color: rgb(253, 253, 253);
+    width: 100%;
+    text-align: right;
+    margin-top: 10%;
+}
+.boton {
+    padding: 3%;
+    border: none;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 4%;
+}
+
+
+/* adaptacion para registro de usuarios  */
+.seccion-form-flex {
+    display: flex;
+    justify-content: space-around;
+}
+.campo-peque {
+    flex: 0 0 40%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    color: white;
+    height: 40px;
+}
+
+#complementario {
+    display: block;
+    margin-top: 10%;
+    color: rgb(7, 0, 104);
+}
