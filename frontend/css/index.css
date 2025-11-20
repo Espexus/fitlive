@@ -34,7 +34,7 @@ html {
     text-decoration: none;
     color: white;
 }
-.enlace-menu:hover {
+.enlace-menu:hover, .enlace-menu:active {
     background-color: rgb(23, 23, 23);
 }
 
@@ -108,6 +108,25 @@ li {
 
 @media (max-width: 480px) {
     html {
-        font-size: 10px;
+        font-size: 12px;
+    }
+    .separador {
+        margin: 12% 0 12% 20%;
+    }
+    img {
+        margin: 5% auto;
+    }
+    li {
+        margin: 20% 0;
+    }
+    footer {
+        padding: 10% 5%;
+        padding-bottom: 5%;
+    }
+    .menu-principal {
+        width: 25%;
+    }
+    .enlace-menu {
+        padding: 8% 14%;
     }
 }
