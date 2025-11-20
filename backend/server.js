@@ -111,8 +111,8 @@ app.get("/api/usuarios/verificar_disponibilidad/:alias", (req, res) => {
     })
 })
 
-app.get("/api/usuarios/:alias/:clave", (req, res) => {
-    const {alias, clave}  = req.params;
+app.post("/api/usuarios/login", (req, res) => {
+    const {alias, clave}  = req.body;
 
     if(!alias || !clave) {
         return res.status(400).json({error: "faltan datos"})
@@ -126,7 +126,7 @@ app.get("/api/usuarios/:alias/:clave", (req, res) => {
     })
 })
 
-app.post("/api/usuarios", (req, res) => {
+app.post("/api/usuarios/", (req, res) => {
     const {alias, clave, correo, edad, pais} = req.body;
 
     if(!alias || !clave || !correo) {
@@ -140,7 +140,7 @@ app.post("/api/usuarios", (req, res) => {
         if(err) {
             return res.status(500).json({error: "problema de comunicación con la bd"});
         }
-        res.json({message: "usuario creado", id: resultado.insertId, alias, clave, correo, edad, pais});
+        res.json({message: "usuario creado", id: resultado.insertId, alias, correo, edad, pais});
     })
 })
 
