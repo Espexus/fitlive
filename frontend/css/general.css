@@ -83,4 +83,7 @@ label {
     html {
         font-size: 10px;
     }
+    .campo-form {
+        height: 30px;
+    }
 }

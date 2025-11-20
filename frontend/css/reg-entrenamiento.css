@@ -16,3 +16,16 @@ label {
     width: 20%;
     height: 40px;
 }
+
+@media (max-width: 480px) {
+    html {
+        font-size: 10px;
+    }
+    select {
+        height: 4vh;
+    }
+    .campo-form {
+        height: 25px;
+    }
+
+}
