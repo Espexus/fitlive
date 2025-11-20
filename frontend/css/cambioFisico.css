@@ -1,0 +1,17 @@
+.seccion-form {
+    margin: 2%;
+}
+.boton {
+    display: block;
+    padding: 1% 2%;
+    margin: 2% auto;
+}
+.centrado {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+.gray-text {
+    margin: 0 auto;
+    width: 20%;
+}
