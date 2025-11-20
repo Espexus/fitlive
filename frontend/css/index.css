@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 16px;
+}
+.main {
+    width: 100wh;
+    padding: 1% 4%;
+    box-sizing: border-box;
+}
+
+/* estilos del menu */
+.menu-principal {
+    position: fixed;
+    width: 16%;
+    box-sizing: border-box;
+    top: 50px;
+    right: 10px;
+    background-color: black;
+}
+.item-menu {
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+.enlace-menu {
+    display: block;
+    width: 100%;
+    padding: 8%;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+}
+.enlace-menu:hover {
+    background-color: rgb(23, 23, 23);
+}
+
+/* textos */
+.titulo-principal {
+    font-size: 5em;
+    font-family: monospace;
+    text-align: center;
+    margin-bottom: 6%;
+}
+.subtitulo {
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 2%;
+}
+p {
+    width: 80%;
+    font-size: 1.2em;
+}
+/* estilos para habitos */
+.habitos {
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 4%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* separador  */
+.separador {
+    width: 60%;
+    border: 1.5px solid black;
+    margin: 6% 0 6% 20%;
+}
+
+/* imagenes */
+img {
+    width: 50%;
+    margin: 2% auto;
+    margin-left: 4%;
+}
+
+
+/* footer  */
+footer {
+    background-color: rgb(18, 18, 18);
+    color: white;
+    width: 100%;
+    padding: 5%;
+    padding-bottom: 1%;
+    box-sizing: border-box;
+}
+.flex-footer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 6%;
+}
+footer a {
+    color: white;
+}
+ul {
+    list-style: none;
+}
+li {
+    margin: 12% 0;
+}
+.info-footer {
+    font-size: 1.1em;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 10px;
+    }
+}

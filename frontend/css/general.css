@@ -78,3 +78,9 @@ label {
 .contenedor-entrenamientos {
     min-height: 92vh;
 }
+
+@media (max-width: 480px) {
+    html {
+        font-size: 10px;
+    }
+}

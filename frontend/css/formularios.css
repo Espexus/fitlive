@@ -86,3 +86,9 @@ label {
     margin-top: 10%;
     color: rgb(7, 0, 104);
 }
+
+@media (max-width: 480px) {
+    html {
+        font-size: 10px;
+    }
+}
