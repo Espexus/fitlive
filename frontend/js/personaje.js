@@ -1,6 +1,10 @@
 (function(){
     window.addEventListener("DOMContentLoaded", async ()=> {
         const idUsuario = localStorage.getItem("idUsuarioActivo")
+        if(!idUsuario) {
+            window.location.href("/fitlive/frontend/login.html");
+            return;
+        }
         let resultado;
 
         try {
@@ -88,7 +92,7 @@
                 break;
 
             default:
-                personaje = "img/niv9.jpg";
+                personaje = "img/niv10.jpg";
                 expProx = "Estás en el nivel máximo"
                 expFaltante = 0
             

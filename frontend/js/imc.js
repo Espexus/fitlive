@@ -1,5 +1,13 @@
 (function(){
 
+    window.addEventListener("DOMContentLoaded", ()=> {
+        const idUsuario = localStorage.getItem("idUsuarioActivo");
+        if(!idUsuario) {
+            window.location.href("/fitlive/frontend/login.html")
+            return;
+        }
+    })
+
     // obtener el imc actual al cargar la página primero
     let imcActual = document.getElementById("imc-actual");
 

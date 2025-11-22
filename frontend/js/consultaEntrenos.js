@@ -2,6 +2,12 @@
     window.addEventListener("DOMContentLoaded", async ()=> {
         let resultado;
         const idUsuario = parseInt(localStorage.getItem("idUsuarioActivo"));
+
+        if(!idUsuario) {
+            window.location.href("/fitlive/frontend/login.html");
+            return;
+        }
+
         console.log(idUsuario)
         try {
             const res = await fetch(`http://localhost:3000/api/entrenamientos/${idUsuario}`);
