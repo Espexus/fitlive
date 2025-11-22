@@ -63,7 +63,7 @@
             const respuesta = await res.json();
             console.log("exito ", respuesta.id)
 
-            localStorage.setItem("id", respuesta.id)
+            localStorage.setItem("idUsuarioActivo", respuesta.id)
 
             alert(`tu usuario ha sido creado id: ${respuesta.id}, alias: ${respuesta.alias}, correo: ${respuesta.correo}`);
 
