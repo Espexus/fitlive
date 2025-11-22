@@ -107,7 +107,7 @@ app.get("/api/usuarios/verificar_disponibilidad/:alias", (req, res) => {
         if(err) {
             return res.status(500).json({error: "error en la consulta"})
         }
-        res.json(resultado[0])
+        res.json(resultado[0]);
     })
 })
 
@@ -127,20 +127,26 @@ app.post("/api/usuarios/login", (req, res) => {
 })
 
 app.post("/api/usuarios/", (req, res) => {
+    console.log("BODY RECIBIDO:", req.body);
+    console.log("LLEGÓ PETICIÓN AL BACKEND");
     const {alias, clave, correo, edad, pais} = req.body;
 
     if(!alias || !clave || !correo) {
         return res.status(400).json({error: "faltan datos"});
 
-    } else if (isNaN(edad)){
-        return res.status(400).json({error: "dato de edad inválido"})
+    } else if(edad) {
+            if (isNaN(edad)){
+            return res.status(400).json({error: "dato de edad inválido"})
+        }
     }
 
     db.query("CALL registrarUsuario (?, ?, ?, ?, ?)", [alias, clave, correo, edad, pais], (err, resultado) => {
+        console.log(resultado);
         if(err) {
-            return res.status(500).json({error: "problema de comunicación con la bd"});
+            return res.status(500).json({error: "problema de comunicación con la bd", err});
         }
-        res.json({message: "usuario creado", id: resultado.insertId, alias, correo, edad, pais});
+        id = resultado[0][0].id
+        res.json({message: "usuario creado", id, alias, correo, edad, pais});
     })
 })
 
