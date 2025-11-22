@@ -2,8 +2,15 @@
     let exp;
 window.addEventListener("DOMContentLoaded", async ()=> {
     const idUsuario = localStorage.getItem("idUsuarioActivo")
-    const res = await fetch(`http://localhost:3000/api/exp/${idUsuario}`);
-    const resultado = await res.json();
+
+    try {
+        const res = await fetch(`http://localhost:3000/api/exp/${idUsuario}`);
+        if(!res.ok) { throw new Error ("error en la consulta") }
+        const resultado = await res.json();
+
+    } catch(error) {
+        console.error("error", error)
+    }
 
     exp = resultado[0].exp;
     console.log(exp);

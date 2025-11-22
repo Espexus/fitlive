@@ -91,4 +91,11 @@ label {
     html {
         font-size: 10px;
     }
+    .caja-formulario {
+        width: 80vw;
+        min-height: 48vh;
+    }
+    .enlace-form, label {
+        font-size: 1.6em;
+    }
 }
