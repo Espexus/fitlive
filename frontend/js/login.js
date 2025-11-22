@@ -44,6 +44,8 @@
         if(respuesta.length != 0) {
             localStorage.setItem("idUsuarioActivo", respuesta[0].id);
             window.location.href = "/fitlive/index.html";
+        } else {
+            alert("contraseña incorrecta o no tienes una cuenta, recuerda tu clave o crea una cuenta nueva bro")
         }
     }
 })()
