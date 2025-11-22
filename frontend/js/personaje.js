@@ -2,10 +2,11 @@
     window.addEventListener("DOMContentLoaded", async ()=> {
         const idUsuario = localStorage.getItem("idUsuarioActivo")
         if(!idUsuario) {
-            window.location.href("/fitlive/frontend/login.html");
+            window.location.href = "/fitlive/frontend/login.html";
             return;
         }
         let resultado;
+        console.log(idUsuario)
 
         try {
             const res = await fetch(`http://localhost:3000/api/exp/${idUsuario}`);

@@ -2,16 +2,19 @@
     let exp;
 window.addEventListener("DOMContentLoaded", async ()=> {
     const idUsuario = localStorage.getItem("idUsuarioActivo")
+    console.log(idUsuario)
+    let resultado
 
     if(!idUsuario) {
-            window.location.href("/fitlive/frontend/login.html");
+            window.location.href = "/fitlive/frontend/login.html";
+
             return;
         }
 
     try {
         const res = await fetch(`http://localhost:3000/api/exp/${idUsuario}`);
         if(!res.ok) { throw new Error ("error en la consulta") }
-        const resultado = await res.json();
+        resultado = await res.json();
 
     } catch(error) {
         console.error("error", error)
@@ -66,6 +69,7 @@ async function registrarEntreno(idUsuario, intensidad, tiempo, tipo, grupoM) {
 }
 
 async function actualizarExp (idUsuario, intensidad, tiempo) {
+    console.log("ejecuta")
     const expNueva = exp + (intensidad * tiempo);
 
     try {
