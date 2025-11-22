@@ -61,16 +61,16 @@ app.get("/api/entrenamientos/:id_usuario", (req, res) => {
 })
 
 app.post("/api/entrenamientos", (req, res) => {
-    const {id, fecha, intensidad, tiempo, tipo, grupo} = req.body;
+    const {id, intensidad, tiempo, tipo, grupo} = req.body;
 
-    if(!id || !fecha || !intensidad || !tiempo || !tipo || !grupo) {
+    if(!id || !intensidad || !tiempo || !tipo || !grupo) {
         return res.status(400).json({error: "faltan datos"});
 
     } else if (isNaN(id) || isNaN(intensidad) || isNaN(tiempo)){
         return res.status(400).json({error: "datos invalidos"})
     }
 
-    db.query("CALL registroEntrenos (?, ?, ?, ?, ?, ?)", [id, fecha, intensidad, tiempo, tipo, grupo], (err, resultado) => {
+    db.query("CALL registroEntrenos (?, ?, ?, ?, ?)", [id, intensidad, tiempo, tipo, grupo], (err, resultado) => {
         if(err) {
             return res.status(500).json({error: "problema de comunicación con la bd"});
         }
@@ -180,7 +180,7 @@ app.put("/api/exp/:id_usuario/:new_exp", (req, res) => {
         if(err) {
             return res.status(500).json({error: "problema de comunicación con la bd"});
         }
-        res.json({message: "actualizado correctamente", new_exp});
+        res.json({message: "Tu exp fue actualizado correctamente", new_exp});
     })
 })
 
