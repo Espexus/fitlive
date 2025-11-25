@@ -6,7 +6,8 @@ window.addEventListener("DOMContentLoaded", async ()=> {
     let resultado
 
     if(!idUsuario) {
-            window.location.href = "/fitlive/frontend/login.html";
+            window.location.href = "login.html";
+
 
             return;
         }
