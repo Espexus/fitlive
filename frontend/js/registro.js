@@ -67,7 +67,7 @@
 
             alert(`tu usuario ha sido creado id: ${respuesta.id}, alias: ${respuesta.alias}, correo: ${respuesta.correo}`);
 
-            window.location.href = "/fitlive/index.html";
+            window.location.href = "../index.html";
 
         }
         catch(err) {
